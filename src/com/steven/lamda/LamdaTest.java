@@ -121,8 +121,11 @@ public class LamdaTest {
 			System.out.println(price);
 		}
 		// With Lambda expression:
-		costBeforeTax.stream().map((cost) -> cost + .12*cost).forEach(System.out::println);
-		double total = 0;for (Integer cost : costBeforeTax) {
+		costBeforeTax.stream()
+		.map((cost) -> cost + .12*cost)
+		.forEach(System.out::println);
+		double total = 0;
+		for (Integer cost : costBeforeTax) {
 			double price = cost + .12*cost;
 			total = total + price;
 		}
@@ -175,17 +178,20 @@ public class LamdaTest {
 	}
 	public static void main(String[] args) {
 		LamdaTest lamdaTest=new LamdaTest();
-		lamdaTest.test1();
+		//lamdaTest.test1();
 		//lamdaTest.test2();
-		lamdaTest.test3();
+		//lamdaTest.test3();
 		//System.out.println("---");
-		lamdaTest.test4();
-		lamdaTest.test5();
+		//lamdaTest.test4();
+		//lamdaTest.test5();
 
 		lamdaTest.test6();
-		lamdaTest.test7();
-		lamdaTest.test8();
-		lamdaTest.test9();
-		lamdaTest.test10();
+//		lamdaTest.test7();
+//		lamdaTest.test8();
+//		lamdaTest.test9();
+//		lamdaTest.test10();
+		
+		List<Integer> numbers = Arrays.asList(9, 10, 3, 4, 7, 3, 4);
+	//	System.out.println(numbers.stream());
 	}
 }
